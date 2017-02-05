@@ -17,11 +17,19 @@ public class AnimationController : MonoBehaviour {
         anim = GetComponent<Animator>();
         Blink();
 	}
-	
-	// Update is called once per frame
-	//void Update () {
-		//TODO: set correct animation state for what is happening
-	//}
+
+    // Update is called once per frame
+    void Update()
+    {
+        float x = Mathf.Abs(Input.GetAxis("Horizontal"));
+
+        anim.SetFloat("Speed", x);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            anim.SetTrigger("Jump");
+        }
+    }
 
     /// <summary>
     /// Simple self calling class to make the character blink
