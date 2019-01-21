@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     Rigidbody2D rb2D;
     SpriteRenderer spR;
 
+    //new test comment
     public float jumpPower = 10;
 
 	// Use this for initialization
